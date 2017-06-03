@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="295.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bakalarskyprojekt.controllers.ImportDataDbController">
+   <center>
+      <VBox prefHeight="397.0" prefWidth="444.0" BorderPane.alignment="TOP_CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <HBox alignment="CENTER" style="-fx-background-color: gray;">
+               <children>
+                  <Label text="Import from Database" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="339.0" prefWidth="522.0" spacing="10.0">
+               <children>
+                  <TableView fx:id="tableView" prefHeight="304.0" prefWidth="271.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="tableColumnType" minWidth="-1.0" prefWidth="65.0" text="Type" />
+                        <TableColumn fx:id="tableColumnName" minWidth="-1.0" prefWidth="189.0" text="Name" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="btnSubmit" mnemonicParsing="false" onAction="#loadOnAction" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 0;" text="Load" />
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

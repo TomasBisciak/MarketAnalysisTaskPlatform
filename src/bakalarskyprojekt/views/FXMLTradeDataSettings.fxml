@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bakalarskyprojekt.controllers.TradeDataSettingsController">
+   <center>
+      <VBox prefHeight="397.0" prefWidth="599.0" BorderPane.alignment="TOP_CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <HBox style="-fx-background-color: gray;">
+               <children>
+                  <Label text="Trade properties" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="339.0" prefWidth="522.0" spacing="10.0">
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="146.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="386.0" minWidth="10.0" prefWidth="376.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Number of trades" />
+                        <Label layoutX="10.0" layoutY="17.0" text="Short/Long " GridPane.rowIndex="1" />
+                        <Label layoutX="10.0" layoutY="47.0" text="Stop loss range" GridPane.rowIndex="2" />
+                        <Label layoutX="10.0" layoutY="77.0" text="Target range" GridPane.rowIndex="3" />
+                        <Label layoutX="10.0" layoutY="107.0" text="Parameters (optional)" GridPane.rowIndex="5" />
+                        <TextField fx:id="txtFieldNumOfTrades" promptText="integer" GridPane.columnIndex="1" />
+                        <HBox alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label layoutX="60.0" layoutY="17.0" text="Short" />
+                              <TextField fx:id="txtFieldSLPercentageS" prefHeight="25.0" prefWidth="45.0" promptText="\%" />
+                              <Label text="\%" />
+                              <Label layoutX="10.0" layoutY="17.0" text="Long">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="txtFieldSLPercentageL" prefHeight="25.0" prefWidth="40.0" promptText="\%" />
+                              <Label layoutX="55.0" layoutY="10.0" text="\%" />
+                              <CheckBox fx:id="checkBoxExact" mnemonicParsing="false" text="Exact Short">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </CheckBox>
+                              <TextField fx:id="txtFieldSLExact" disable="true" layoutX="151.0" layoutY="13.0" prefHeight="25.0" prefWidth="40.0" promptText="integer" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="230.0" layoutY="40.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Label layoutX="145.0" layoutY="17.0" text="from" />
+                              <TextField fx:id="txtFieldStopLossRangeMin" prefWidth="130.0" promptText="integer" />
+                              <Label text="&lt;" />
+                              <Label layoutX="10.0" layoutY="17.0" text="to" />
+                              <TextField fx:id="txtFieldStopLossRangeMax" prefHeight="25.0" prefWidth="130.0" promptText="integer" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="230.0" layoutY="70.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Label text="from" />
+                              <TextField fx:id="txtFieldTargetRangeMin" prefWidth="130.0" promptText="integer" />
+                              <Label text="&lt;" />
+                              <Label text="to" />
+                              <TextField fx:id="txtFieldTargetRangeMax" prefHeight="25.0" prefWidth="130.0" promptText="integer" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="txtFieldAdditionalParams" layoutX="230.0" layoutY="13.0" promptText="-paramName value" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label layoutX="10.0" layoutY="137.0" text="Data range" GridPane.rowIndex="4" />
+                        <HBox alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <Label text="from" />
+                              <TextField fx:id="txtFieldPriceRangeMin" prefWidth="130.0" promptText="BigDecimal" />
+                              <Label text="&lt;" />
+                              <Label text="to" />
+                              <TextField prefHeight="25.0" prefWidth="130.0" promptText="BigDecimal" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+                  <Button fx:id="btnSubmit" mnemonicParsing="false" onAction="#submitOnAction" style="-fx-background-radius: 0;" text="Submit" />
+                  <TextArea prefHeight="104.0" prefWidth="522.0" text="Parameter reference:" wrapText="true" />
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

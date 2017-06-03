@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="435.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="BOTTOM_CENTER">
+               <children>
+                  <ImageView fitHeight="110.0" fitWidth="214.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/images/ucm.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Bachelor's project" textFill="#727272">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TextArea editable="false" prefHeight="262.0" prefWidth="428.0" text="V praktickej časti bakalárskej práce bola navrhnutá aplikácia demonštrujúca naštudované možnosti tvorby viacvláknových programov pre multiprocesorové systémy. Demonštruje využitie programátorských modelov umožňujúcich explicitné vytváranie vlákien, správnu implementáciu komunikácie vlákien v rámci používateľského rozhrania a vnútorných systémov aplikácie, implementácie prístupu vlákien k zdieľaným dátam a techniky umožňujúce viacvláknovým systémom správne a efektívne využitie systémových zdrojov.Vytvorenou aplikáciou je platforma pre tvorbu a spúšťanie úloh, ktorá umožňuje pomocou obsiahnutých systémov analyzovať, tvoriť, spúšťať, ukladať, porovnávať používateľom vytvorené úlohy. Pod pojmom úlohy sú myslené podprogramy vytvorené používateľom pomocou nami poskytovanou knižnicou a následne spustené našou platformou. Aplikácia je prevažne zameraná, ale nie limitovaná na analýzu dát medzinárodného devízového trhu. Takto vytvorená aplikácia môže byť v rámci ďalšieho vývoja zakomponovaná ako súčasť, alebo podsystém automatizácie obchodovania na devízových trhoch. Cieľová skupina používateľov sú pokročilí používatelia, programátori schopný vytvárať programy korešpondujúce s jazykom, v ktorých je knižnica dostupná. V rámci bakalárskej prace bola vytvorená knižnica podporujúca tvorbu úloh na platforme Java. Program poskytuje pohodlnú prácu s dátami, využitím jeho mnohých funkcionalít je možné výrazne zvýšiť produktivitu používateľa." wrapText="true" />
+            <HBox alignment="TOP_CENTER" layoutX="30.0" layoutY="20.0" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="399.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bakalarskyprojekt.controllers.SysInfoViewController">
+   <center>
+      <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Server">
+               <content>
+                  <SplitPane dividerPositions="0.383248730964467" prefHeight="160.0" prefWidth="200.0" style="-fx-padding: 0;">
+                     <items>
+                        <VBox prefHeight="383.0" prefWidth="934.0">
+                           <children>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" style="-fx-padding: 0;" VBox.vgrow="ALWAYS">
+                                 <content>
+                                    <GridPane fx:id="gridPaneStatHolderS" hgap="5.0" prefHeight="350.0" prefWidth="299.0" style="-fx-background-color: #7f8c8d;">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="462.0" minWidth="10.0" prefWidth="121.0" />
+                                        <ColumnConstraints hgrow="ALWAYS" maxWidth="277.0" minWidth="10.0" prefWidth="163.0" />
+                                      </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="30.0" prefHeight="30.0" />
+                                          <RowConstraints minHeight="30.0" prefHeight="30.0" />
+                                          <RowConstraints minHeight="30.0" prefHeight="30.0" />
+                                          <RowConstraints minHeight="30.0" prefHeight="30.0" />
+                                          <RowConstraints minHeight="30.0" prefHeight="30.0" />
+                                          <RowConstraints minHeight="30.0" prefHeight="30.0" />
+                                          <RowConstraints minHeight="30.0" prefHeight="30.0" />
+                                          <RowConstraints minHeight="30.0" prefHeight="30.0" />
+                                          <RowConstraints minHeight="30.0" prefHeight="30.0" />
+                                          <RowConstraints minHeight="30.0" prefHeight="30.0" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Operating System:" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label layoutX="21.0" layoutY="17.0" text="Processor:" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label fx:id="lblOs" layoutX="21.0" layoutY="17.0" text="N/A" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Label fx:id="lblProc" layoutX="121.0" layoutY="17.0" text="N/A" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Label fx:id="lblCPUP" layoutX="121.0" layoutY="52.0" text="N/A" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label fx:id="lblCPUL" layoutX="121.0" layoutY="87.0" text="N/A" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <Label text="Physical CPU(s):" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label layoutX="33.0" layoutY="87.0" text="Logical CPU(s):" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label layoutX="40.0" layoutY="122.0" text="Swap used:" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label layoutX="10.0" layoutY="157.0" text="Uptime:" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label layoutX="10.0" layoutY="192.0" text="Domain name:" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label layoutX="10.0" layoutY="192.0" text="Host name:" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label fx:id="lblSwap" layoutX="121.0" layoutY="122.0" text="N/A" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <Label fx:id="lblDomain" layoutX="121.0" layoutY="157.0" text="N/A" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                          <Label fx:id="lblHost" layoutX="121.0" layoutY="157.0" text="N/A" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                          <Label fx:id="lblUptime" layoutX="121.0" layoutY="157.0" text="N/A" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                          <Label layoutX="38.0" layoutY="122.0" text="RAM" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label fx:id="lblRAM" layoutX="121.0" layoutY="122.0" text="N/A" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <HBox alignment="CENTER_RIGHT" GridPane.halignment="RIGHT">
+                                             <children>
+                                                <Label text="Title" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="13.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <Label layoutX="10.0" layoutY="17.0" text="Value" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="System Bold Italic" size="13.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets left="1.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </GridPane>
+                                 </content>
+                                 <effect>
+                                    <InnerShadow color="#575757" radius="4.75" width="0.0" />
+                                 </effect>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <ToggleButton fx:id="tBtnOSHI" mnemonicParsing="false" style="-fx-background-radius: 0;" text="Turn off OSHI">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ToggleButton>
+                              <StackPane fx:id="stackPane" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <BarChart fx:id="chartCPU" legendVisible="false" title="CPU Usage (Load between ticks)">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis autoRanging="false" label="Percentage" side="LEFT" />
+                                      </yAxis>
+                                    </BarChart>
+                                    <Label fx:id="lblLoading" style="-fx-border-color: #ecf0f1; -fx-background-color: #bdc3c7; -fx-border-width: 3;" text="Loading..." textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" right="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </StackPane>
+                              <HBox>
+                                 <children>
+                                    <Label fx:id="lblProcAndThreads" text="Processes: N/A Threads:N/A">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <HBox alignment="TOP_RIGHT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="lblCpuTemp" text="CPU Temperature:N/A">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+          <Tab text="Client">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <Label text="Localhost version." BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
